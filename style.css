@@ -1,0 +1,186 @@
+/* Root variables for easy theme management */
+:root {
+    --bg-color: #f7f7f7;
+    --container-bg: #ffffff;
+    --text-color: #ffffff;
+    --wordle-bg: #7bb677;
+    --wordle-hover: #669663;
+    --strands-bg: #aae5f2;
+    --strands-hover: #97ccd8;
+    --sudoku-bg: #fa9b00;
+    --sudoku-hover: #da870b;
+    --connections-bg: #bb70c4;
+    --connections-hover: #a060aa;
+    --crossword-bg: #6493e6;
+    --crossword-hover: #5880cc;
+    --spelling-bee-bg: #f7da21;
+    --spelling-bee-hover: #dfc522;
+    --the-mini-bg: #95befa;
+    --the-mini-hover: #80a7dd;
+    --letter-boxed-bg: #e05c56;
+    --letter-boxed-hover: #c5504c;
+    --tiles-bg: #b5e253;
+    --tiles-hover: #a3cc4e;
+    --word-search-bg: #05a1b3;
+    --word-search-hover: #068a9a;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px 20px 0; /* Added top and bottom padding */
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background-color: var(--container-bg);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px; /* Added margin-top */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+}
+
+.game-button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.game-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wordle {
+    background-color: var(--wordle-bg);
+}
+
+.wordle:hover {
+    background-color: var(--wordle-hover);
+}
+
+.strands {
+    background-color: var(--strands-bg);
+}
+
+.strands:hover {
+    background-color: var(--strands-hover);
+}
+
+.sudoku {
+    background-color: var(--sudoku-bg);
+}
+
+.sudoku:hover {
+    background-color: var(--sudoku-hover);
+}
+
+.connections {
+    background-color: var(--connections-bg);
+}
+
+.connections:hover {
+    background-color: var(--connections-hover);
+}
+
+.crossword {
+    background-color: var(--crossword-bg);
+}
+
+.crossword:hover {
+    background-color: var(--crossword-hover);
+}
+
+.spelling-bee {
+    background-color: var(--spelling-bee-bg);
+}
+
+.spelling-bee:hover {
+    background-color: var(--spelling-bee-hover);
+}
+
+.the-mini {
+    background-color: var(--the-mini-bg);
+}
+
+.the-mini:hover {
+    background-color: var(--the-mini-hover);
+}
+
+.letter-boxed {
+    background-color: var(--letter-boxed-bg);
+}
+
+.letter-boxed:hover {
+    background-color: var(--letter-boxed-hover);
+}
+
+.tiles {
+    background-color: var(--tiles-bg);
+}
+
+.tiles:hover {
+    background-color: var(--tiles-hover);
+}
+
+.word-search {
+    background-color: var(--word-search-bg);
+}
+
+.word-search:hover {
+    background-color: var(--word-search-hover);
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .button-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .button-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .game-button {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
